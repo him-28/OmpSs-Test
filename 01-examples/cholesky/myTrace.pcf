@@ -1,0 +1,583 @@
+DEFAULT_OPTIONS
+
+LEVEL               THREAD
+UNITS               NANOSEC
+LOOK_BACK           100
+SPEED               1
+FLAG_ICONS          ENABLED
+NUM_OF_STATE_COLORS 1000
+YMAX_SCALE          37
+
+
+DEFAULT_SEMANTIC
+
+THREAD_FUNC          State As Is
+
+
+STATES
+0    Idle
+1    Running
+2    Not created
+3    Waiting a message
+4    Blocking Send
+5    Synchronization
+6    Test/Probe
+7    Scheduling and Fork/Join
+8    Wait/WaitAll
+9    Blocked
+10    Immediate Send
+11    Immediate Receive
+12    I/O
+13    Group Communication
+14    Tracing Disabled
+15    Others
+16    Send Receive
+17    Memory transfer
+18    Profiling
+19    On-line analysis
+20    Remote memory access
+21    Atomic memory operation
+22    Memory ordering operation
+23    Distributed locking
+24    Overhead
+25    One-sided op
+26    Startup latency
+27    Waiting links
+28    Data copy
+29    RTT
+30    Allocating memory
+31    Freeing memory
+
+
+STATES_COLOR
+0    {117,195,255}
+1    {0,0,255}
+2    {255,255,255}
+3    {255,0,0}
+4    {255,0,174}
+5    {179,0,0}
+6    {0,255,0}
+7    {255,255,0}
+8    {235,0,0}
+9    {0,162,0}
+10    {255,0,255}
+11    {100,100,177}
+12    {172,174,41}
+13    {255,144,26}
+14    {2,255,177}
+15    {192,224,0}
+16    {66,66,66}
+17    {255,0,96}
+18    {169,169,169}
+19    {169,0,0}
+20    {0,109,255}
+21    {200,61,68}
+22    {200,66,0}
+23    {0,41,0}
+24    {139,121,177}
+25    {116,116,116}
+26    {200,50,89}
+27    {255,171,98}
+28    {0,68,189}
+29    {52,43,0}
+30    {255,46,0}
+31    {100,216,32}
+
+
+EVENT_TYPE
+6    40000033    Executing CPU
+6    40000133    CPU-Event sampling interval
+
+
+EVENT_TYPE
+6    40000001    Application
+VALUES
+0      End
+1      Begin
+
+
+EVENT_TYPE
+6    40000050    RAW clock() value from system
+
+
+EVENT_TYPE
+6    40000003    Flushing Traces
+VALUES
+0      End
+1      Begin
+
+
+EVENT_TYPE
+6    40000002    Trace initialization
+VALUES
+0      End
+1      Begin
+
+
+EVENT_TYPE
+6    40000036    Process IDentifier
+6    40000037    Parent Process IDentifier
+6    40000038    fork() depth
+
+
+
+
+GRADIENT_COLOR
+0    {0,255,2}
+1    {0,244,13}
+2    {0,232,25}
+3    {0,220,37}
+4    {0,209,48}
+5    {0,197,60}
+6    {0,185,72}
+7    {0,173,84}
+8    {0,162,95}
+9    {0,150,107}
+10    {0,138,119}
+11    {0,127,130}
+12    {0,115,142}
+13    {0,103,154}
+14    {0,91,166}
+
+
+GRADIENT_NAMES
+0    Gradient 0
+1    Grad. 1/MPI Events
+2    Grad. 2/OMP Events
+3    Grad. 3/OMP locks
+4    Grad. 4/User func
+5    Grad. 5/User Events
+6    Grad. 6/General Events
+7    Grad. 7/Hardware Counters
+8    Gradient 8
+9    Gradient 9
+10    Gradient 10
+11    Gradient 11
+12    Gradient 12
+13    Gradient 13
+14    Gradient 14
+
+
+EVENT_TYPE
+0    9200011    User Function Name
+VALUES
+0   End
+1 Unresolved
+2 _NOT_Found
+3 int main.. char**) [int main(int, char**)]
+
+
+EVENT_TYPE
+0    9200021    User Function Location
+VALUES
+0   End
+1 0 (Unresolved)
+2 0 (_NOT_Found)
+3 67 (cholesky.c)
+
+
+EVENT_TYPE
+0 41000000 Object addresses for task 1.1
+VALUES
+1 completed.6832 [0x00604d38-0x00604d38]
+2 dtor_idx.6834 [0x00604d40-0x00604d47]
+3 __FRAME_END__ [0x00404818-0x00404817]
+4 nanos_funct_id_init.2694 [0x00604d64-0x00604d67]
+5 nanos_instr_uf_location_key.2695 [0x00604d60-0x00604d63]
+6 INFO.2188 [0x00604d68-0x00604d6b]
+7 L.2189 [0x0040425a-0x0040425a]
+8 nanos_funct_id_init.2713 [0x00604d5c-0x00604d5f]
+9 nanos_instr_uf_location_key.2714 [0x00604d58-0x00604d5b]
+10 nanos_funct_id_init.2752 [0x00604d4c-0x00604d4f]
+11 nanos_instr_uf_location_key.2753 [0x00604d48-0x00604d4b]
+12 nanos_funct_id_init.2733 [0x00604d54-0x00604d57]
+13 nanos_instr_uf_location_key.2734 [0x00604d50-0x00604d53]
+14 NT.2256 [0x00404259-0x00404259]
+15 TR.2255 [0x00404258-0x00404258]
+16 gtod_ref_time_sec.2004 [0x00604d70-0x00604d77]
+17 __MERCURIUM_PRETTY_FUNCTION__.2600 [0x00404240-0x00404257]
+18 __GNU_EH_FRAME_HDR [0x004042b0-0x004042af]
+19 __bss_start [0x00604d34-0x00604d33]
+20 _end [0x00604d78-0x00604d77]
+21 _IO_stdin_used [0x00403f50-0x00403f53]
+
+EVENT_TYPE
+9    40000018    Tracing mode:
+VALUES
+1      Detailed
+2      CPU Bursts
+
+
+EVENT_TYPE
+0    9200037    Dependence direction
+
+
+EVENT_TYPE
+0    9200058    Overheads of botlev scheduler broken down
+
+
+EVENT_TYPE
+0    9200023    Number tasks in the graph
+
+
+EVENT_TYPE
+0    9200063    Team info
+
+
+EVENT_TYPE
+0    9200047    Constraint used by affinity scheduler
+
+
+EVENT_TYPE
+0    9200002    Work Descriptor id:
+
+
+EVENT_TYPE
+0    9200066    Stolen WD
+
+
+EVENT_TYPE
+0    9200059    A critical work descriptor is submitted
+
+
+EVENT_TYPE
+0    9200027    Inside CUDA runtime
+VALUES
+26      Launching CUDA kernel(s) in task
+9      cudaMemcpyAsyncDeviceToHost()
+5      cudaMemcpyDeviceToDevice()
+17      cudaSetDeviceFlags()
+13      cudaKernelStreamSynchronize()
+23      cudaEventRecord()
+15      cudaSetDevice()
+29      cudaDeviceGetPCIBusId()
+27      cudaStreamCreate()
+14      cudaDeviceSynchronize()
+4      cudaFreeHost()
+20      memcpy()
+25      cudaEventSynchronize()
+24      cudaEventQuery()
+18      cudaGetLastError()
+10      cudaMemcpyAsyncHostToDevice()
+12      cudaOutputStreamSynchronize()
+19      CUDA generic event
+2      cudaFree()
+1      cudaMalloc()
+28      cudaStreamDestroy
+3      cudaMallocHost()
+6      cudaMemcpyDeviceToHost()
+21      cudaEventCreate()
+7      cudaMemcpyHostToDevice()
+22      cudaEventDestroy()
+11      cudaInputStreamSynchronize()
+16      cudaGetDeviceProperties()
+8      cudaMemcpyPeerAsync()
+
+
+EVENT_TYPE
+0    9200057    Total overheads of botlev scheduler
+
+
+EVENT_TYPE
+0    9200041    Number of Threads
+
+
+EVENT_TYPE
+0    9200069    Reduction support
+VALUES
+1      Allocating private storage
+2      Reducing private storages
+
+
+EVENT_TYPE
+0    9200039    Inside OpenCL runtime
+VALUES
+12      clEnqueueUnmapMemObject(blocking=true)
+9      clEnqueueCopyBuffer() Device to device transfer
+3      clGetDeviceInfo()
+7      clCreateCommandQueue()
+11      clEnqueueMapBuffer(blocking=true)
+2      clReleaseMemObject()
+5      clEnqueueWriteBuffer(blocking=true)
+10      clCreateSubBuffer(blocking=true)
+8      Compile, build and clCreateKernel() nanox routine
+13      OpenCL generic event
+1      clCreateBuffer()
+6      clEnqueueReadBuffer(blocking=true)
+4      clCreateContext()
+
+
+EVENT_TYPE
+0    9200020    Time on Yield (in nsecs)
+
+
+EVENT_TYPE
+0    9200017    Lock address
+
+
+EVENT_TYPE
+0    9200043    Dependence address
+
+
+EVENT_TYPE
+0    9200033    Number of scheduler operations
+
+
+EVENT_TYPE
+0    9200032    Time on block (in nsecs)
+
+
+EVENT_TYPE
+0    9200030    Chunk size
+
+
+EVENT_TYPE
+0    9200014    Create WD pointer:
+
+
+EVENT_TYPE
+0    9200034    Time on scheduler operations (in nsecs)
+
+
+EVENT_TYPE
+0    9200062    Network transfer to node 
+
+
+EVENT_TYPE
+0    9200044    WD id that is copying data in
+
+
+EVENT_TYPE
+0    9200031    Number of blocking operations
+
+
+EVENT_TYPE
+0    9200060    Asynchronous memory copy between host and devices
+VALUES
+2      GPU device to host transfer (CUDA)
+1      Host to GPU device transfer (CUDA)
+
+
+EVENT_TYPE
+0    9200048    Inside MPI runtime
+VALUES
+24      Async recv
+7      deep_booster_free(...)
+14      MPI Realloc data inside node
+2      free()
+20      MPI remote node cache doing allocation
+19      MPI remote node cache doing device to device copy outg
+6      MPI copy data between two nodes
+12      nanos mpi_ssend()
+3      deep_booster_alloc(...)
+1      malloc()
+13      MPI Copy local inside node
+23      MPI remote node cache doing copy local
+26      MPI generic event
+4      MPI Copy data to remote node
+18      MPI remote node cache doing device to device copy in
+22      MPI remote node cache doing free of previous allocated chunk
+25      Async send
+5      MPI copy data from remote node
+15      MPI remote node task waiting for copyIns before starting
+11      nanos mpi_recv()
+8      nanos_mpi_init()
+21      MPI remote node cache doing reallocation
+16      MPI remote node cache doing copy in
+9      nanos_mpi_finalize()
+17      MPI remote node cache doing copy out
+10      nanos mpi_send()
+
+
+EVENT_TYPE
+0    9200026    Loop step
+
+
+EVENT_TYPE
+0    9200001    Nanos Runtime API
+VALUES
+23      nanos_create_team()
+12      nanos_destroy_lock()
+35      nanos_free()
+26      nanos_end_team()
+40      nanos_get_num_running_tasks()
+28      nanos_copy_value()
+46      nanos_memalign()
+14      nanos_team_barrier()
+48      nanos_stick_to_producer()
+3      nanos_create_xxx_cond()
+4      nanos_sync_cond_wait()
+47      nanos_cmalloc()
+44      nanos_dependence_release_all()
+32      nanos_omp_find_worksharing()
+39      nanos_get_num_blocked_tasks()
+38      nanos_get_num_nonready_tasks()
+31      nanos_get_nonimplicit_threads()
+15      nanos_current_wd()
+9      nanos_set_lock()
+6      nanos_destroy_sync_cond()
+37      nanos_get_num_total_tasks()
+16      nanos_get_wd_id()
+41      nanos_dependence_pendant_writes()
+7      nanos_wait_on()
+42      nanos_in_final()
+10      nanos_unset_lock()
+20      nanos_set_internal_wd_data()
+22      nanos_yield()
+24      nanos_enter_team()
+49      nanos_task_reduction_register()
+29      nanos_omp_barrier()
+1      nanos_find_slicer()
+34      nanos_malloc()
+19      nanos_create_wd_and_run()
+8      nanos_init_lock()
+11      nanos_try_lock()
+5      nanos_sync_cond_signal()
+30      nanos_get_implicit_threads()
+18      nanos_submit()
+2      nanos_wg_wait_completion()
+25      nanos_leave_team()
+50      nanos_task_reduction_get_thread_storage()
+45      nanos_set_translate_function()
+21      nanos_get_internal_wd_data()
+43      nanos_set_final()
+36      nanos_get_num_ready_tasks()
+27      nanos_get_addr()
+33      nanos_omp_get_schedule()
+17      nanos_create_xxx_wd()
+13      nanos_single_guard()
+
+
+EVENT_TYPE
+0    9200040    Call to the taskwait nanos runtime function
+
+
+EVENT_TYPE
+0    9200018    Number of Spins
+
+
+EVENT_TYPE
+0    9200045    WD id that is copying data in
+
+
+EVENT_TYPE
+0    9200028    Transfer size
+
+
+EVENT_TYPE
+0    9200052    Asynchronous thread state events
+VALUES
+11      Processing finished event
+4      WD post-run
+8      Copy data in
+5      Scheduling tasks
+10      Check events
+3      Running WD
+9      Copy data out
+6      Checking for inputs
+12      Synchronize copy
+7      Checking for outputs
+2      WD pre-run
+1      inlineWorkDependent()
+
+
+EVENT_TYPE
+0    9200024    Loop lower bound
+
+
+EVENT_TYPE
+0    9200036    Dependence analysis
+
+
+EVENT_TYPE
+0    9200056    Work descriptor criticality
+
+
+EVENT_TYPE
+0    9200038    Priority of a work descriptor
+
+
+EVENT_TYPE
+0    9200046    WD id that is copying data in
+
+
+EVENT_TYPE
+0    9200022    Number of ready tasks in the queues
+
+
+EVENT_TYPE
+0    9200055    GPU Work Descriptor id:
+
+
+EVENT_TYPE
+0    9200042    Thread cpuid
+
+
+EVENT_TYPE
+0    9200025    Loop upper
+
+
+EVENT_TYPE
+0    9200019    Number of Yields
+
+
+EVENT_TYPE
+0    9000000    Thread state: 
+VALUES
+0      NOT CREATED
+1      NOT RUNNING
+2      STARTUP
+3      SHUTDOWN
+4      ERROR
+5      IDLE
+6      RUNTIME
+7      RUNNING
+8      SYNCHRONIZATION
+9      SCHEDULING
+10      CREATION
+11      DATA TRANSFER ISSUE
+12      CACHE ALLOC/FREE
+13      YIELD
+14      ACQUIRING LOCK
+15      CONTEXT SWITCH
+16      FILL COLOR
+17      WAKING UP
+18      STOPPED
+19      SYNCED RUNNING
+27      EXTRAE I/O
+
+
+EVENT_TYPE
+0    9000001    Point-to-point origin
+
+
+EVENT_TYPE
+0    9000002    Point-to-point destination
+
+
+EVENT_TYPE
+0    9000004    Thread sub-state
+VALUES
+0      NOT CREATED
+1      NOT RUNNING
+2      STARTUP
+3      SHUTDOWN
+4      ERROR
+5      IDLE
+6      RUNTIME
+7      RUNNING
+8      SYNCHRONIZATION
+9      SCHEDULING
+10      CREATION
+11      DATA TRANSFER ISSUE
+12      CACHE ALLOC/FREE
+13      YIELD
+14      ACQUIRING LOCK
+15      CONTEXT SWITCH
+16      FILL COLOR
+17      WAKING UP
+18      STOPPED
+19      SYNCED RUNNING
+27      EXTRAE I/O
+
+
